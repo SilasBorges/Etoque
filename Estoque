@@ -1,0 +1,25 @@
+package principal;
+
+public class Estoque {
+	public String Nome;
+	public double preco;
+	public int quantidade;
+	
+
+public double TotalValorEstoque() {
+	
+	return quantidade * preco;
+	
+}
+public void AddQuantidade(int quantidade){
+	
+	this.quantidade += quantidade;
+	
+	
+}
+public void RemoveQuantidade(int quantidade){
+	
+	this.quantidade -= quantidade;
+}
+
+}
