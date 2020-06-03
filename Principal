@@ -1,0 +1,41 @@
+package principal;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		Locale.setDefault(Locale.UK);
+		
+		Estoque x = new Estoque();
+		
+		System.out.println("Qual o nome do produto:");
+		x.Nome = sc.nextLine();
+		
+		System.out.println("Qual o preço do produto:");
+		x.preco = sc.nextDouble();
+		
+		System.out.println("Qual a quantidade que tem no estoque:");
+		x.quantidade = sc.nextInt();
+		
+		System.out.println("No estoque temos " + x.quantidade + " quantidades.\nDo produto "+ x.Nome + " com o valor unitario R$ "+ x.preco);
+		
+		System.out.println("\nInforme uma entrada de itens no estoque");
+		int quantidade = sc.nextInt();
+		
+		x.AddQuantidade(quantidade);
+		
+		System.out.println("No estoque temos " + x.quantidade + " quantidades.\n Do produto "+ x.Nome + " com o valor unitario R$ "+ x.preco);
+		
+		System.out.println("\nInforme uma saída de itens no estoque");
+		quantidade = sc.nextInt();
+		
+		x.RemoveQuantidade(quantidade);
+		
+		System.out.println("No estoque temos " + x.quantidade + " quantidades.\n Do produto "+ x.Nome + " com o valor unitario R$ "+ x.preco);
+	}
+
+}
